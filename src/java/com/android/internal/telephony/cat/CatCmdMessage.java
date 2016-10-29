@@ -35,6 +35,9 @@ public class CatCmdMessage implements Parcelable {
     private CallSettings mCallSettings = null;
     private SetupEventListSettings mSetupEventListSettings = null;
     private boolean mLoadIconFailed = false;
+    // MTK
+    public int mInfoType = 0;
+    public String mDestAddress = null;
 
     /*
      * Container for Launch Browser command settings.
@@ -121,6 +124,12 @@ public class CatCmdMessage implements Parcelable {
             mSetupEventListSettings.eventList = ((SetEventListParams) cmdParams).mEventInfo;
             break;
         case PROVIDE_LOCAL_INFORMATION:
+        // MTK
+        case CALLCTRL_RSP_MSG:
+            mTextMsg = ((CallCtrlBySimParams) cmdParams).mTextMsg;
+            mInfoType = ((CallCtrlBySimParams) cmdParams).mInfoType;
+            mDestAddress = ((CallCtrlBySimParams) cmdParams).mDestAddress;
+            break;
         case REFRESH:
         default:
             break;

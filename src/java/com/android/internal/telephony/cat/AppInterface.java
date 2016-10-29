@@ -81,7 +81,13 @@ public interface AppInterface {
         CLOSE_CHANNEL(0x41),
         RECEIVE_DATA(0x42),
         SEND_DATA(0x43),
-        GET_CHANNEL_STATUS(0x44);
+        GET_CHANNEL_STATUS(0x44),
+        ACTIVATE(0x70),
+        // MTK
+        /**
+         * Proprietay message for Call Control alpha id display
+         */
+        CALLCTRL_RSP_MSG(0XFF);
 
         private int mValue;
 

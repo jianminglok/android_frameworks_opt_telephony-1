@@ -289,7 +289,7 @@ public abstract class IccFileHandler extends Handler implements IccConstants {
                         fileid, 0, onLoaded);
 
         mCi.iccIOForApp(COMMAND_GET_RESPONSE, fileid, getEFPath(fileid),
-                        0, 0, 0, null, null, mAid, response);
+                        0, 0, GET_RESPONSE_EF_SIZE_BYTES, null, null, mAid, response);
     }
 
     /**
