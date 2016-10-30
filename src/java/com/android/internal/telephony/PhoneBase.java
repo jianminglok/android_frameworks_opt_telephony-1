@@ -2181,6 +2181,14 @@ public abstract class PhoneBase extends Handler implements Phone {
         return mCi.getLteOnCdmaMode();
     }
 
+    /**
+     * {@hide}
+     */
+    @Override
+    public int getLteOnGsmMode() {
+        return mCi.getLteOnGsmMode();
+    }
+    
     public void setVoiceMessageWaiting(int line, int countWaiting) {
         // This function should be overridden by class GSMPhone and CDMAPhone.
         Rlog.e(LOG_TAG, "Error! This function should never be executed, inactive Phone.");
