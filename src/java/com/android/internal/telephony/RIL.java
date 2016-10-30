@@ -5405,6 +5405,18 @@ public class RIL extends BaseCommands implements CommandsInterface {
         }
         send(rr);
     }
+    
+    @Override
+    public void setMaxTransmitPower(int state, Message response) {
+        RILRequest rr = RILRequest.obtain(RIL_REQUEST_SET_MAX_TRANSMIT_POWER, response);
+
+        if (RILJ_LOGD) {
+            riljLog(rr.serialString() + "> " + requestToString(rr.mRequest) + " state = " + state);
+        }
+
+        rr.mParcel.writeInt(state);
+        send(rr);
+    }
 
     // MTK
     // xen0n: move MTK-specific method implementations into MediaTekRIL
