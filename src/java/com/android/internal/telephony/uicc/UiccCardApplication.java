@@ -766,10 +766,10 @@ public class UiccCardApplication {
         }
     }
 
-    public void supplyNetworkDepersonalization (String pin, Message onComplete) {
+    public void supplyNetworkDepersonalization (String pin, String type, Message onComplete) {
         synchronized (mLock) {
-            if (DBG) log("supplyNetworkDepersonalization");
-            mCi.supplyNetworkDepersonalization(pin, onComplete);
+            if (DBG) log("Network Despersonalization: pin = **** , type = " + type);
+            mCi.supplyNetworkDepersonalization(pin, type, onComplete);
         }
     }
 
