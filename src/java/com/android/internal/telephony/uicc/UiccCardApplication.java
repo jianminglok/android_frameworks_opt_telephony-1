@@ -152,7 +152,7 @@ public class UiccCardApplication {
             }
 
             if (mPersoSubState != oldPersoSubState &&
-                    mPersoSubState == PersoSubState.PERSOSUBSTATE_SIM_NETWORK) {
+                    isPersoLocked()) {
                 notifyNetworkLockedRegistrantsIfNeeded(null);
             }
 
