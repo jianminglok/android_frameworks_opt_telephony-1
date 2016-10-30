@@ -975,7 +975,7 @@ public class RIL extends BaseCommands implements CommandsInterface {
 
     @Override
     public void
-    supplyNetworkDepersonalization(String netpin, Message result) {
+    supplyNetworkDepersonalization(String netpin, String type, Message response) {
         RILRequest rr = RILRequest.obtain(RIL_REQUEST_ENTER_NETWORK_DEPERSONALIZATION, result);
 
         if (RILJ_LOGD) riljLog(rr.serialString() + "> " + requestToString(rr.mRequest));
