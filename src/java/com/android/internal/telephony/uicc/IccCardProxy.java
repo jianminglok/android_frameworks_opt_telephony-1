@@ -485,8 +485,8 @@ public class IccCardProxy extends Handler implements IccCard {
                 setExternalState(State.PUK_REQUIRED);
                 break;
             case APPSTATE_SUBSCRIPTION_PERSO:
-                if (mUiccApplication.getPersoSubState() ==
-                        PersoSubState.PERSOSUBSTATE_SIM_NETWORK) {
+                if (mUiccApplication.isPersoLocked()) {
+                    mPersoSubState = mUiccApplication.getPersoSubState();
                     setExternalState(State.NETWORK_LOCKED);
                 } else {
                     setExternalState(State.UNKNOWN);
