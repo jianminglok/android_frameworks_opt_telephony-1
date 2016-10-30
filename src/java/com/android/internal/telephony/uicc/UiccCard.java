@@ -320,8 +320,7 @@ public class UiccCard {
             mLastRadioState = radioState;
         }
     }
-
-    protected void createAndUpdateCatService() {
+    
     // MTK
     // protected void createAndUpdateCatService() {
     protected void createAndUpdateCatService(CommandsInterface ci) {
