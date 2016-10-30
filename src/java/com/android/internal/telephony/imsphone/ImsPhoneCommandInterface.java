@@ -612,6 +612,10 @@ class ImsPhoneCommandInterface extends BaseCommands implements CommandsInterface
     @Override
     public void getModemActivityInfo(Message result) {
     }
+    
+    @Override
+    public void setMaxTransmitPower(int state, Message response) {
+    }
 
     // MTK
 
