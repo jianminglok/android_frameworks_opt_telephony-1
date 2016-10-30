@@ -1861,6 +1861,18 @@ public interface CommandsInterface {
      * @param channel Channel id. Id of the channel to be closed.
      * @param response Callback message.
      */
+    
+    public void iccOpenLogicalChannel(String AID, byte p2, Message response);
+
+    /**
+     * Close a previously opened logical channel to the SIM.
+     *
+     * Input parameters equivalent to TS 27.007 AT+CCHC command.
+     *
+     * @param channel Channel id. Id of the channel to be closed.
+     * @param response Callback message.
+     */
+    
     public void iccCloseLogicalChannel(int channel, Message response);
 
     /**
