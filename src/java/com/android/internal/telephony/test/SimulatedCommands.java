@@ -1799,6 +1799,11 @@ public final class SimulatedCommands extends BaseCommands
     public void getModemActivityInfo(Message result) {
         unimplemented(result);
     }
+    
+    @Override
+    public void setMaxTransmitPower(int state, Message response) {
+        unimplemented(response);
+    }
 
     // MTK
 
