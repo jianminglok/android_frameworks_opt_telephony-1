@@ -1739,6 +1739,12 @@ public interface CommandsInterface {
     public int getLteOnCdmaMode();
 
     /**
+     * Return if the current radio is LTE on GSM
+     * @hide
+     */
+    public int getLteOnGsmMode();
+    
+    /**
      * Request the ISIM application on the UICC to perform the AKA
      * challenge/response algorithm for IMS authentication. The nonce string
      * and challenge response are Base64 encoded Strings.
@@ -2102,6 +2108,14 @@ public interface CommandsInterface {
      * @param result Callback message contains the modem activity information
      */
     public void getModemActivityInfo(Message result);
+    
+    /**
+     *
+     * Set MAX transmit power state
+     *
+     * @param response Callback message contains the status from modem
+     */
+     public void setMaxTransmitPower(int state, Message response);
 
     /**
      * Request to update the current local call hold state.
