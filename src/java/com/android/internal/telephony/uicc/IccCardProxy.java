@@ -118,6 +118,7 @@ public class IccCardProxy extends Handler implements IccCard {
                                         // ACTION_SIM_STATE_CHANGED intents
     private boolean mInitialized = false;
     private State mExternalState = State.UNKNOWN;
+    private PersoSubState mPersoSubState = PersoSubState.PERSOSUBSTATE_UNKNOWN;
 
     public static final String ACTION_INTERNAL_SIM_STATE_CHANGED = "android.intent.action.internal_sim_state_changed";
 
