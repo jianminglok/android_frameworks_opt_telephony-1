@@ -500,7 +500,7 @@ public class IccCardProxy extends Handler implements IccCard {
                 setExternalState(State.UNKNOWN);
                 break;
          }
-        }
+        
     }
 
     private void registerUiccCardEvents() {
@@ -878,10 +878,10 @@ public class IccCardProxy extends Handler implements IccCard {
     }
 
     @Override
-    public void supplyNetworkDepersonalization(String pin, Message onComplete) {
+    public void supplyNetworkDepersonalization(String pin, String type, Message onComplete) {
         synchronized (mLock) {
             if (mUiccApplication != null) {
-                mUiccApplication.supplyNetworkDepersonalization(pin, onComplete);
+                mUiccApplication.supplyNetworkDepersonalization(pin, type, onComplete);
             } else if (onComplete != null) {
                 Exception e = new RuntimeException("CommandsInterface is not set.");
                 AsyncResult.forMessage(onComplete).exception = e;
