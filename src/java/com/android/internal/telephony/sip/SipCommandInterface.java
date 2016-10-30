@@ -615,10 +615,6 @@ class SipCommandInterface extends BaseCommands implements CommandsInterface {
     public void setMaxTransmitPower(int state, Message response) {
     }
     
-    @Override
-    public void getLteOnGsmMode() {
-    }
-    
     // MTK
 
     @Override
