@@ -1806,6 +1806,12 @@ public interface Phone {
      * or {@link PhoneConstants#LTE_ON_CDMA_TRUE}
      */
     public int getLteOnCdmaMode();
+    
+    /**
+     * Return if the current radio is LTE on GSM
+     * @hide
+     */
+    public int getLteOnGsmMode();
 
     /**
      * TODO: Adding a function for each property is not good.
