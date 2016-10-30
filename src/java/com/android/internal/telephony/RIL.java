@@ -737,6 +737,10 @@ public class RIL extends BaseCommands implements CommandsInterface {
         tdc.registerRIL(this);
     }
 
+    protected RILReceiver createRILReceiver() {
+        return new RILReceiver();
+    }
+    
     //***** CommandsInterface implementation
 
     @Override
